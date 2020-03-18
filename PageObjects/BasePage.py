@@ -4,8 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class BasePage:
     """
-        Implements the base test-page
-        """
+    Implements the base test-page
+    """
     currency = (By.XPATH, "//*[@id='_desktop_currency_selector']/div/span[2]")
 
     def __init__(self, browser):
