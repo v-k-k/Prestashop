@@ -4,6 +4,10 @@ from selenium import webdriver
 import pytest
 
 
+desiredCapabilities = {"chrome": DesiredCapabilities.CHROME,
+                       "firefox": DesiredCapabilities.FIREFOX
+                       }
+
 BROWSER = None
 
 
@@ -18,10 +22,7 @@ def setup(request):
     global BROWSER, desiredCapabilities
     browser_name = request.config.getoption("browser_name")
 
-    if browser_name == "chrome":
-        BROWSER = webdriver.Chrome(executable_path=CHROME)
-    elif browser_name == "firefox":
-        BROWSER = webdriver.Firefox(executable_path=FIREFOX)
+    BROWSER = webdriver.Remote(desired_capabilities=desiredCapabilities["firefox"])
 
     BROWSER.get(URL)
     BROWSER.maximize_window()
