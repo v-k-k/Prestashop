@@ -8,6 +8,7 @@ desiredCapabilities = {"chrome": DesiredCapabilities.CHROME,
                        "firefox": DesiredCapabilities.FIREFOX
                        }
 
+HUB = "http://192.168.99.100:4000/wd/hub"
 BROWSER = None
 
 
@@ -22,7 +23,7 @@ def setup(request):
     global BROWSER, desiredCapabilities
     browser_name = request.config.getoption("browser_name")
 
-    BROWSER = webdriver.Remote(desired_capabilities=desiredCapabilities["firefox"])
+    BROWSER = webdriver.Remote(desired_capabilities=desiredCapabilities["firefox"], command_executor=HUB)
 
     BROWSER.get(URL)
     BROWSER.maximize_window()
