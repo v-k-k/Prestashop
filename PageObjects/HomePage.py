@@ -1,5 +1,6 @@
 from .BasePage import BasePage
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class HomePage(BasePage):
@@ -32,7 +33,8 @@ class HomePage(BasePage):
         currencies = currencies_list.find_elements(*HomePage.currencies)
         for cur in currencies:
             if "Доллар" in cur.get_attribute("title"):
-                cur.click()
+                self.browser.execute_script("$(arguments[0]).click();", cur)
+                # cur.click()
                 break
 
     def search_dress(self):

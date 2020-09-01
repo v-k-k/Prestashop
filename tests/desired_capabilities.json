@@ -1,0 +1,38 @@
+[
+	{
+		"browserName": "chrome",
+		"version": "84.0",
+		"enableVNC": true,
+		"enableVideo": false
+	},
+	{
+		"browserName": "chrome",
+		"version": "85.0",
+		"enableVNC": true,
+		"enableVideo": false
+	},
+	{
+		"browserName": "firefox",
+		"version": "78.0",
+		"enableVNC": true,
+		"enableVideo": false
+	},
+	{
+		"browserName": "firefox",
+		"version": "79.0",
+		"enableVNC": true,
+		"enableVideo": false
+	},
+	{
+		"browserName": "opera",
+		"version": "69.0",
+		"enableVNC": true,
+		"enableVideo": false
+	},
+	 {
+		"browserName": "opera",
+		"version": "70.0",
+		"enableVNC": true,
+		"enableVideo": false
+	}
+]

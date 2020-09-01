@@ -51,9 +51,9 @@ class TestCase(BaseClass):
         """
         result_page = SearchResultsPage(self.browser)
         result_page.set_sort_from_high()
-        #with allure.step("Doing screenshot"):
-         #   allure.attach(result_page.browser.get_screenshot_as_png(),
-          #                name="screenshit", attachment_type=AttachmentType.PNG)
+        # with allure.step("Doing screenshot"):
+        # allure.attach(result_page.browser.get_screenshot_as_png(),
+        # name="screenshit", attachment_type=AttachmentType.PNG)
         assert not len(result_page.is_sorted())
 
     @allure.feature("Check the discounts")
@@ -67,3 +67,4 @@ class TestCase(BaseClass):
         pairs = result_page.check_discount()
         for pair in pairs:
             assert pair[0] == pair[1][0]
+        SearchResultsPage.ALL_PRICES = []

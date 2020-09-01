@@ -4,3 +4,8 @@ env
 .log
 .pytest_cache
 __pycache__
+allure-2.9.0
+reports
+.idea/
+*.log
+geckodriver.log

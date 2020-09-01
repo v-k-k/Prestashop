@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 
 
 class BasePage:
@@ -24,5 +25,9 @@ class BasePage:
         Protected method that returns 10 sec explicit waiting
         """
         return WebDriverWait(self.browser, 10)
+
+    @property
+    def action(self):
+        return ActionChains(self.browser)
 
 

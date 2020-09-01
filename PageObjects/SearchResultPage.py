@@ -13,6 +13,7 @@ class SearchResultsPage(BasePage):
     lst = (By.XPATH, "//*[@id='js-product-list']/div[1]")
     items = (By.XPATH, "article")
     price = (By.XPATH, "div/div/div/span[@class='price']")
+    # sorting_popup = (By.CLASS_NAME, "material-icons pull-xs-right")
     sorting_popup = (By.XPATH, "//*[@id='js-product-list-top']/div[2]/div/div")
     from_high = (By.XPATH, "div/a")
     item_prices = (By.XPATH, "div/div/div/span")
@@ -63,15 +64,16 @@ class SearchResultsPage(BasePage):
         Performs the sorting of items on the page from highest to lowest price
         """
         popup = self.browser.find_element(*SearchResultsPage.sorting_popup)
-        popup.click()
+        popup.find_element_by_xpath("a/i").click()
         sort_types = popup.find_elements(*SearchResultsPage.from_high)
+        # //div[@class='dropdown-menu']//a
         sort_types[-1].click()
 
     def is_sorted(self):
         """
         Returns the empty list if items correctly sorted
         """
-        time.sleep(0.5)
+        time.sleep(1)
         items = self.find_items()
         for item in items:
             prices = item.find_elements(*SearchResultsPage.item_prices)
