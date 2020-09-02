@@ -1,4 +1,6 @@
 {
 	"single_run": false,
-	"use_selenoid": true
+	"use_selenoid": true,
+	"sauce_labs": false,
+	"browser_stack": false
 }

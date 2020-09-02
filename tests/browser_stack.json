@@ -1,0 +1,30 @@
+[
+	{
+		"os": "Windows",
+		"os_version": "10",
+		"browser": "Chrome",
+		"browser_version": "81",
+		"name": "volodymyr113's First Test"
+	},
+	{
+		"os": "Windows",
+		"os_version": "10",
+		"browser": "IE",
+		"browser_version": "11",
+		"name": "volodymyr113's First Test"
+	},
+	{
+		"os": "Windows",
+		"os_version": "10",
+		"browser": "Edge",
+		"browser_version": "18",
+		"name": "volodymyr113's First Test"
+	},
+	{
+		"os": "Windows",
+		"os_version": "10",
+		"browser": "Firefox",
+		"browser_version": "62",
+		"name": "volodymyr113's First Test"
+	}
+]

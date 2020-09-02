@@ -1,0 +1,26 @@
+[
+	{
+		"browserName": "MicrosoftEdge",
+		"browserVersion": "84.0",
+		"platformName": "Windows 10",
+		"sauce:options": {}
+	},
+	{
+		"browserName": "chrome",
+		"browserVersion": "83.0",
+		"platformName": "Windows 10",
+		"sauce:options": {}
+	},
+	{
+		"browserName": "firefox",
+		"browserVersion": "58.0",
+		"platformName": "Windows 10",
+		"sauce:options": {}
+	},
+	{
+		"browserName": "internet explorer",
+		"browserVersion": "11.285",
+		"platformName": "Windows 10",
+		"sauce:options": {}
+	}
+]
